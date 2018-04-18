@@ -36,12 +36,10 @@ parameters:
   required: true
 - name: CPU_LIMIT
   description: cpu limit
-  value: "400m"
-  required: true
+  required: false
 - name: MEMORY_LIMIT
   description: Memory limit
-  value: "100Mi"
-  required: true
+  required: false
 - name: ETHERPAD_IMAGE
   description: Etherpad Image to be used
   value: "quay.io/wkulhanek/etherpad:latest"
