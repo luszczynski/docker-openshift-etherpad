@@ -34,6 +34,14 @@ parameters:
   description: Database Port
   value: "3306"
   required: true
+- name: CPU_LIMIT
+  description: cpu limit
+  value: "200m"
+  required: true
+- name: MEMORY_LIMIT
+  description: Memory limit
+  value: "100Mi"
+  required: true
 - name: ETHERPAD_IMAGE
   description: Etherpad Image to be used
   value: "quay.io/wkulhanek/etherpad:latest"
