@@ -36,7 +36,7 @@ parameters:
   required: true
 - name: CPU_LIMIT
   description: cpu limit
-  value: "200m"
+  value: "400m"
   required: true
 - name: MEMORY_LIMIT
   description: Memory limit
@@ -102,17 +102,17 @@ objects:
               path: /
               port: 9001
               scheme: HTTP
-            initialDelaySeconds: 5
+            initialDelaySeconds: 1
             periodSeconds: 10
             successThreshold: 1
             timeoutSeconds: 1
           livenessProbe:
-            failureThreshold: 3
+            failureThreshold: 4
             httpGet:
               path: /
               port: 9001
               scheme: HTTP
-            initialDelaySeconds: 30
+            initialDelaySeconds: 120
             periodSeconds: 10
             successThreshold: 1
             timeoutSeconds: 1
